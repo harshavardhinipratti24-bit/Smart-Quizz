@@ -1,0 +1,141 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dbeafe, #f3e8ff);
+    color: #1f2937;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px #00000015;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    color: #5b35b5;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+select, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+select {
+    border: 1px solid #cbd5e1;
+    background: white;
+}
+
+button {
+    border: none;
+    background: #6544c0;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4c2d9e;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.answer {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 13px;
+    text-align: left;
+    background: #f1f5f9;
+    color: #1f2937;
+    border: 1px solid #cbd5e1;
+}
+
+.answer:hover:not(:disabled) {
+    background: #e9ddff;
+}
+
+.correct {
+    background: #bbf7d0 !important;
+    border-color: #16a34a;
+}
+
+.wrong {
+    background: #fecaca !important;
+    border-color: #dc2626;
+}
+
+.progress-bar {
+    height: 9px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: #6544c0;
+    transition: width 0.3s;
+}
+
+#feedback {
+    font-weight: bold;
+}
+
+.note {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.history-item, .review-item {
+    margin: 12px 0;
+    padding: 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.history-item button {
+    margin-top: 8px;
+}
+
+.review-item p {
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+[hidden] {
+    display: none !important;
+}

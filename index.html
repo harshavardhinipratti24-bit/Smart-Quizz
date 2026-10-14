@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Quiz & Revision</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>🧠 Smart Quiz</h1>
+        <p>Learn, practice, and revise!</p>
+
+        <section id="setup">
+            <label for="category">Choose a quiz category</label>
+            <select id="category">
+                <option value="9">General Knowledge</option>
+                <option value="23">History</option>
+                <option value="17">Science</option>
+                <option value="22">Geography</option>
+                <option value="18">Computers</option>
+                <option value="21">Sports</option>
+                <option value="11">Entertainment</option>
+            </select>
+
+            <label for="language">Choose a language</label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="te">Telugu</option>
+            </select>
+
+            <p id="languageNote" class="note">
+                Hindi and Telugu question translations are not
+                available yet. The quiz questions will be in English.
+            </p>
+
+            <button id="startBtn">Start Quiz 🚀</button>
+        </section>
+
+        <section id="quiz" hidden>
+            <p id="progress"></p>
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <h2 id="question"></h2>
+            <div id="answers"></div>
+            <p id="feedback" aria-live="polite"></p>
+            <button id="nextBtn" disabled>Next Question</button>
+        </section>
+
+        <section id="results" hidden>
+            <h2 id="emoji"></h2>
+            <h2 id="resultTitle"></h2>
+            <p id="resultScore"></p>
+            <p id="resultMessage"></p>
+            <button id="retryBtn">Try Again 🔄</button>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>📚 Revision History</h2>
+            <p>Your completed quizzes are saved on this device.</p>
+            <div id="history"></div>
+        </section>
+
+        <section id="review" hidden>
+            <h2>📝 Review Your Answers</h2>
+            <div id="reviewContent"></div>
+            <button id="closeReviewBtn">Close Review</button>
+        </section>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
